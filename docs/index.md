@@ -22,16 +22,34 @@ $ ssh flux-login.arc-ts.umich.edu
 If you try to connect from off-campus, you will need to use the UMich
 VPN client.
 
-## What you connected to
-
 You have now logged into the Flux cluster.  Just to make sure that
 everyone is on the same page, we'll go like lightning through the
 components of a typical cluster and Flux in particular.
 
+## Cluster components
+
+The cluster is made up of nodes that perform various functions; the
+following diagram shows a generic cluster configuration.
+
+![Generic cluster configuration](./images/hpc_system_diagram.png)
+
+As you can see, the point of contact is a login node of some type.  Flux
+has two types, one for interactive commands and one only for data
+transfer commands.
+
+There is storage space that is shared among the login (including data
+transfer) and compute nodes, so files you see from a login node are
+also visible from compute nodes.
+
 ## Nodes
 
 We call specific physical machines _nodes_, and there are three types of
-which you should be aware:  login, data transfer, and compute.  Nodes all
-typically look like this.
+which you should be aware:  login, data transfer, and compute.
+
+Nodes typically look something like this,
 
 ![Generic node structure](./images/node_diagram.png)
+
+only most of our nodes have at least eight cores per CPU and most nodes
+have two CPU sockets.
+
