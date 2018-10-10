@@ -6,28 +6,6 @@ will use two Python scripts from a prior SC2 workshop to illustrate.
 
 ![What's are clouds made of?](./images/cloud.jpg)
 
-Before we proceed, you should log into the Flux cluster, on which all of
-you who wish to follow along should have accounts.
-
-Windows people should configure PuTTY to use the host
-
-```
-flux-login.arc-ts.umich.edu
-```
-
-Mac and Linux users should open a Terminal application and use
-
-```
-$ ssh flux-login.arc-ts.umich.edu
-```
-
-If you try to connect from off-campus, you will need to use the UMich
-VPN client.
-
-You have now logged into the Flux cluster.  Just to make sure that
-everyone is on the same page, we'll go like lightning through the
-components of a typical cluster and Flux in particular.
-
 ## Cluster components
 
 The cluster is made up of nodes that perform various functions; the
