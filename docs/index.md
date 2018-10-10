@@ -1,17 +1,37 @@
+# Introduction to HPC at UM for SC2
 
-## High * computing at UM
+The purpose of this presentation is to provide a quick overview of what
+HPC and HTC is, system components, and how to find software to run.  We
+will use two Python scripts from a prior SC2 workshop to illustrate.
 
-Here at UM, we don't have separate facilities for HPC and HTC,
-they are both done on one system.
+Before we proceed, you should log into the Flux cluster, on which all of
+you who wish to follow along should have accounts.
 
-Picture
+Windows people should configure PuTTY to use the host
 
-![Generic HPC system structure](https://epcced.github.io/hpc-intro/fig/hpc_system_diagram.png)
+```
+flux-login.arc-ts.umich.edu
+```
 
-more text.
+Mac and Linux users should open a Terminal application and use
 
-What a computer looks like
+```
+$ ssh flux-login.arc-ts.umich.edu
+```
 
-![Generic node structure](https://epcced.github.io/hpc-intro/fig/node_diagram.png)
+If you try to connect from off-campus, you will need to use the UMich
+VPN client.
 
-More text.
+## What you connected to
+
+You have now logged into the Flux cluster.  Just to make sure that
+everyone is on the same page, we'll go like lightning through the
+components of a typical cluster and Flux in particular.
+
+## Nodes
+
+We call specific physical machines _nodes_, and there are three types of
+which you should be aware:  login, data transfer, and compute.  Nodes all
+typically look like this.
+
+![Generic node structure](./images/node_diagram.png)
