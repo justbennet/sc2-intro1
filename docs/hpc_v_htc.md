@@ -55,7 +55,8 @@ many applications share a computing infrastructure at the same time
 &ndash; in this way the overall throughput of several applications is
 supposed to be maximized.
 
-[IGI Guide](https://www.igi-global.com/chapter/high-throughput-data-analysis-proteomic/35696)
+[IGI Global: High-Throughput Data Analysis of Proteomic Mass Spectra on
+the SwissBioGrid](https://www.igi-global.com/chapter/high-throughput-data-analysis-proteomic/35696)
 
 ## University of Michigan clusters
 
