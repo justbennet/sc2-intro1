@@ -172,3 +172,41 @@ The second is that the name is compound name, where all the requirements
 are embedded in it.  Read off software name/version number pairs from
 right to left, so `gcc/5.4.0` was used to make `openmpi/1.10.2`, which was
 used to make `gromacs/5.1.2`.
+
+So, if you try to load `gromacs/5.1.2/openmpi/1.10.2/gcc`, you will get
+
+```
+Lmod has detected the following error:  Cannot load module
+"gromacs/5.1.2/openmpi/1.10.2/gcc/5.4.0" without these module(s) loaded:
+   gcc/5.4.0 openmpi/1.10.2/gcc/5.4.0 boost/1.61.0 mkl/11.3.3
+```
+so we try this, 
+
+```
+$ module load gcc/5.4.0 openmpi/1.10.2/gcc/5.4.0 boost/1.61.0 mkl/11.3.3
+```
+
+and that works, so we retry loading `gromacs`, and it works.  That leaves
+us with this list
+
+```
+Currently Loaded Modules:
+  1) gcc/5.4.0                  4) mkl/11.3.3
+  2) openmpi/1.10.2/gcc/5.4.0   5) gromacs/5.1.2/openmpi/1.10.2/gcc/5.4.0
+  3) boost/1.61.0
+```
+
+Modules are loaded only for a login session.  And that is kind of a long list,
+so it would be nice if we had a short way to load that group of modules, and
+we do.  You can save a &lsquo;module set&rsquo; using `module save`, as in
+the following example which creates a set called `gromacs`.
+
+```
+$ module save gromacs
+```
+
+To see which sets you have created, use `module savelist`, and if you are
+like me and might forget what is in a set, `module describe` followed
+by a set name will show which modules are contained in it.
+
+So, purge your loaded modules, and let's try to use Flux.
