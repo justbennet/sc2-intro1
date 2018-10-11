@@ -114,4 +114,61 @@ other modules it considers to be near-misses. It will also
 suggest you include the version number to obtain more
 information about the specific version.
 
+So, you should run these two commands,
 
+```
+$ module spider opencv
+$ module spider opencv/3.2.0
+```
+and compare the output.
+
+To load a module, you use `module load`, as in
+
+```
+$ module load opencv/3.2.0
+Lmod has detected the following error:  Cannot load module
+"opencv/3.2.0" without these module(s) loaded:
+   ffmpeg/3.2.4 image-libraries/170303
+
+While processing the following module(s):
+    Module fullname  Module Filename
+    ---------------  ---------------
+    opencv/3.2.0     /sw/coe/centos7/modulefiles/opencv/3.2.0.lua
+```
+Then you figure out what went wrong.
+
+In this case, Lmod is telling you that two other modules must be loaded
+first, `ffmpeg/3.2.4` and `image-libraries/170303`.  That line should
+be copy and pastable, and you can add those before the module you really
+want.
+
+```
+$ module load ffmpeg/3.2.4 image-libraries/170303 opencv/3.2.0
+```
+and that should silently succeed.
+
+To see what is loaded, use
+
+```
+$ module list
+```
+
+To remove one module you `module unload` it, or you can clear the deck
+with
+
+```
+$ module purge
+```
+
+Do that.
+
+You may run across some really ugly names in our current setup.  For example,
+```
+gromacs/5.1.2/openmpi/1.10.2/gcc/5.4.0
+```
+There are two things to note about that.  One is that the _module name_ is
+actually `gromacs/5.1.2/openmpi/1.10.2/gcc`, and the version is `5.4.0`.
+The second is that the name is compound name, where all the requirements
+are embedded in it.  Read off software name/version number pairs from
+right to left, so `gcc/5.4.0` was used to make `openmpi/1.10.2`, which was
+used to make `gromacs/5.1.2`.
