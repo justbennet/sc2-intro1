@@ -17,6 +17,16 @@ As you can see, the point of contact is a login node of some type.  Flux
 has two types, one for interactive commands and one only for data
 transfer commands.
 
+Login nodes almost always have policies.  Ours is they are to edit
+files, compile source code, and run test programs on small data
+sets for short periods of time to uncover syntax errors and the like.
+
+The login nodes are not to be used for large parallel programs,
+large datasets, or for a long time. We have compute nodes for that.
+We will show you how to get a compute node(s) if you must have one
+to test things in something called an interactive batch job.
+(Oxymoron alert!)
+
 ## Nodes
 
 We call specific physical machines _nodes_, and there are three types of
