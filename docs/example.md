@@ -1,4 +1,4 @@
-# Am example
+# An example
 
 ## Workflows and pipelines
 
