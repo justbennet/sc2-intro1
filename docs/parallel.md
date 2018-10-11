@@ -7,7 +7,7 @@ Simplistically, a program is parallel if it decomposes a problem into
 independently computable elements and computes multiple elements at
 the same time on different processors.
 
-This might be as simple as running M simulations, one per processor, at
+This might be as simple as running _M_ simulations, one per processor, at
 the same time from N total, where there is no interdependence among the
 individual simulations.  This is often called _embarassingly parallel_
 or possibly loosely coupled.  Results are typically aggregated in a
