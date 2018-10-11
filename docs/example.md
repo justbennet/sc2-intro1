@@ -82,3 +82,39 @@ We should make sure that we do _not_ start this on a huge data set!
 Edit `digitDetectionKey.py` and make sure that `dataset_size = 1000`
 and not some larger number, like 70000.
 
+Now we have the correct version of Python, and we have a scaled
+down dataset we can commence testing.
+
+```
+$ python digitDetectionKey.py
+Coefficients: 
+ [[ 0.  0.  0. ...,  0.  0.  0.]
+ [ 0.  0.  0. ...,  0.  0.  0.]
+ [ 0.  0.  0. ...,  0.  0.  0.]
+ ..., 
+ [ 0.  0.  0. ...,  0.  0.  0.]
+ [ 0.  0.  0. ...,  0.  0.  0.]
+ [ 0.  0.  0. ...,  0.  0.  0.]]
+Non-zero Coefficients 
+ (array([0, 0, 0, ..., 9, 9, 9]), array([ 36,  37,  38, ..., 768, 769, 770]))
+Fraction correct: 
+ 0.865
+```
+
+We need to put that into a script that we could submit to the batch
+system.  So, create a file called `digitDetect.sh` and put the Python
+command into it.
+
+```
+$ cat digitDetect.sh 
+#!/bin/bash
+
+python digitDetectionKey.py
+```
+
+Now try to run it with `bash digitDetect.sh`.  Ah, ha.  Fix it so
+that it saves its output to a file.
+
+Now run it again.
+
+We have completed steps 1&ndash;5.
