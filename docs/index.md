@@ -4,7 +4,7 @@ The purpose of this presentation is to provide a quick overview of what
 HPC and HTC is, system components, and how to find software to run.  We
 will use two Python scripts from a prior SC2 workshop to illustrate.
 
-![What's are clouds made of?](./images/cloud.jpg)
+![Whats are clouds made of?](./images/cloud.jpg)
 
 ## Cluster components
 
