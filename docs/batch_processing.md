@@ -49,7 +49,7 @@ We will now look at each, in the order they appear there.
 
 
   <tr>
-    <td>`-M<`/td>
+    <td>`-M`</td>
     <td>The `-M` option specifies the e-mail address to which notice of events
       related to this job are sent. More than one address can be used, separated
       by commas (no spaces).</td>
