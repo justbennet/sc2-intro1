@@ -17,7 +17,7 @@ directive and its value(s).  The PBS script is submitted using the `qsub`
 command, and all the directives are avaialable as options to that command.
 
 Here is a blank template you can use that contains the most commonly used
-`#PBS` directives:  [PBS template](./images/pbs_template.html)
+`#PBS` directives:  [PBS template](./pbs_template.html)
 
 
 
