@@ -5,5 +5,6 @@ hard to figure out on which nodes to run new jobs, when to start them,
 etc.  This is where the _scheduler_ software comes in.
 
 ![tetris](./images/tetris.jpg)
+
 _What jobs look like to the scheduler_
 
