@@ -24,68 +24,68 @@ We will now look at each, in the order they appear there.
 
 <table>
   <tr>
-    <td>`-N`</td>
-    <td>The `-N` option specifies the job name. This will be displayed by,
-    for example, the `qstat` command to see the job status.
+    <td><code>-N</code></td>
+    <td>The <code>-N</code> option specifies the job name. This will be displayed by,
+    for example, the <code>qstat</code> command to see the job status.
     </td>
   </tr>
 
   <tr>
-    <td>`-A`</td>
-    <td>The `-A` option specifies the account to use; that is, how will the
+    <td><code>-A</code></td>
+    <td>The <code>-A</code> option specifies the account to use; that is, how will the
       job be paid for. Different types of Flux services have different suffixes.
-      For example, a standard Flux account will end with `_flux`, whereas one
+      For example, a standard Flux account will end with <code>_flux</code>, whereas one
       that pays for use of the large-memory Flux service would end with
-      `_fluxm`.
+      <code>_fluxm</code>.
   </td>
   </tr>
 
   <tr>
-    <td>`-q`</td>
-    <td>The `-q` option specifies which queue your job will be in. If the account
-      ends in `_flux`, then `-q` must specify flux. If the account ends with some
-      variation, say, `default_fluxm`, then the queue name must match,
-      e.g., `fluxm`.
+    <td><code>-q</code></td>
+    <td>The <code>-q</code> option specifies which queue your job will be in. If the account
+      ends in <code>_flux</code>, then <code>-q</code> must specify flux. If the account ends with some
+      variation, say, <code>default_fluxm</code>, then the queue name must match,
+      e.g., <code>fluxm</code>.
   </td>
   </tr>
 
 
   <tr>
-    <td>`-M`</td>
-    <td>The `-M` option specifies the e-mail address to which notice of events
+    <td><code>-M</code></td>
+    <td>The <code>-M</code> option specifies the e-mail address to which notice of events
       related to this job are sent. More than one address can be used, separated
       by commas (no spaces).
   </td>
   </tr>
 
   <tr>
-    <td>`-m`</td>
-    <td>The `-m` option specifies the events for which you want notification.
-      They are: abort (`a`), begin (`b`), and end (`e`).  You can also specify
-      none (`n`).
+    <td><code>-m</code></td>
+    <td>The <code>-m</code> option specifies the events for which you want notification.
+      They are: abort (<code>a</code>), begin (<code>b</code>), and end (<code>e</code>).  You can also specify
+      none (<code>n</code>).
   </td>
   </tr>
 
 
   <tr>
-    <td>`-j`</td>
-    <td>Without the `-j` option, whatever the job prints to `STDOUT` will go
-      in one file and whatever the job prints to `STDERR` will go in another.
-      The `-j` option says to join the two and put everything into the job
+    <td><code>-j</code></td>
+    <td>Without the <code>-j</code> option, whatever the job prints to <code>STDOUT</code> will go
+      in one file and whatever the job prints to <code>STDERR</code> will go in another.
+      The <code>-j</code> option says to join the two and put everything into the job
       output file (not to be confused with output that your programs may write).
-      If you specify `-j eo` the two will be joined and put into the
+      If you specify <code>-j eo</code> the two will be joined and put into the
       error file. Practically, these are the same except for the name of the
       file.
   </td>
   </tr>
 
   <tr>
-    <td>`-V`</td>
-    <td>The `-V` option specifies that the environment at the time the job is
+    <td><code>-V</code></td>
+    <td>The <code>-V</code> option specifies that the environment at the time the job is
       submitted should be inherited by your job. So, you will load software
       modules and other system variables during your login session on the
       login node before you submit your job.You should always set up your
-      environment prior to running qsub and use the `-V` option.
+      environment prior to running qsub and use the <code>-V</code> option.
   </td>
   </tr>
 </table>
