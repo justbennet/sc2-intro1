@@ -123,7 +123,13 @@ You do this with
 $ qsub template.pbs
 ```
 
+The output from `qsub` is a _job ID_, which consists of the _job number_ and the
+hostname of the headnod, for example, `31980773.nyx.arc-ts.umich.edu`.
+
 Once submitted, you can see its status by using the `qstat` command.  See the
 [example qstat output](http://cscar.research.umich.edu/wp-content/uploads/sites/5/2016/04/hpc101_qstat.pdf) for
 what it looks like when your job is 1) in the queue (waiting to start), 2) running,
 and 3) once it completes, either successfully or not.
+
+Now that your job has been submitted, it is time for the scheduler to take over.  Please
+go to the next item, _Batch scheduling_, on the menu to the left.
