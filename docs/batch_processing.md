@@ -114,4 +114,16 @@ We will now look at each, in the order they appear there.
   </tr>
 </table>
 
+When you have completed your PBS script by filling in all the options appropriate for
+your job, and adding a command at the bottom to actually run, you are ready to submit it.
 
+You do this with
+
+```
+$ qsub template.pbs
+```
+
+Once submitted, you can see its status by using the `qstat` command.  See the
+[example qstat output](http://cscar.research.umich.edu/wp-content/uploads/sites/5/2016/04/hpc101_qstat.pdf) for
+what it looks like when your job is 1) in the queue (waiting to start), 2) running,
+and 3) once it completes, either successfully or not.
