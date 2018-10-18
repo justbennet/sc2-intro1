@@ -26,9 +26,9 @@ We will now look at each, in the order they appear there.
   <tr>
     <td>`-N`</td>
     <td>The `-N` option specifies the job name. This will be displayed by,
-    for example, the `qstat` command to see the job status.</td>
+    for example, the `qstat` command to see the job status.
+    </td>
   </tr>
-
 
   <tr>
     <td>`-A`</td>
@@ -36,7 +36,8 @@ We will now look at each, in the order they appear there.
       job be paid for. Different types of Flux services have different suffixes.
       For example, a standard Flux account will end with `_flux`, whereas one
       that pays for use of the large-memory Flux service would end with
-      `_fluxm`.</td>
+      `_fluxm`.
+  </td>
   </tr>
 
   <tr>
@@ -44,7 +45,8 @@ We will now look at each, in the order they appear there.
     <td>The `-q` option specifies which queue your job will be in. If the account
       ends in `_flux`, then `-q` must specify flux. If the account ends with some
       variation, say, `default_fluxm`, then the queue name must match,
-      e.g., `fluxm`.</td>
+      e.g., `fluxm`.
+  </td>
   </tr>
 
 
@@ -52,14 +54,16 @@ We will now look at each, in the order they appear there.
     <td>`-M`</td>
     <td>The `-M` option specifies the e-mail address to which notice of events
       related to this job are sent. More than one address can be used, separated
-      by commas (no spaces).</td>
+      by commas (no spaces).
+  </td>
   </tr>
 
   <tr>
     <td>`-m`</td>
     <td>The `-m` option specifies the events for which you want notification.
       They are: abort (`a`), begin (`b`), and end (`e`).  You can also specify
-      none (`n`).</td>
+      none (`n`).
+  </td>
   </tr>
 
 
@@ -71,7 +75,8 @@ We will now look at each, in the order they appear there.
       output file (not to be confused with output that your programs may write).
       If you specify `-j eo` the two will be joined and put into the
       error file. Practically, these are the same except for the name of the
-      file.</td>
+      file.
+  </td>
   </tr>
 
   <tr>
@@ -80,6 +85,7 @@ We will now look at each, in the order they appear there.
       submitted should be inherited by your job. So, you will load software
       modules and other system variables during your login session on the
       login node before you submit your job.You should always set up your
-      environment prior to running qsub and use the `-V` option.</td>
+      environment prior to running qsub and use the `-V` option.
+  </td>
   </tr>
 </table>
