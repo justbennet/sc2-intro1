@@ -34,15 +34,22 @@ We will now look at each, in the order they appear there.
     <td><code>-l</code></td>
     <td>The <code>-l</code> (small 'ell') option specifies the resources the job
       needs.  By resources, we mean physical nodes, processor cores, memory, and
-      the maximum time the job will run.
+      the maximum time the job will run.<br>
       
-      This typically looks like
+      This typically looks like<br>
       
-      <code>#PBS -l nodes=1:ppn=1,mem=1gb,walltime=1:00:00</code>
+      <code>#PBS -l nodes=1:ppn=1,mem=1gb,walltime=1:00:00</code><br>
       
-      or
+      or<br>
       
-      <code>#PBS -l nodes=4:ppn=1,pmem=1gb,walltime=1:00:00</code>
+      <code>#PBS -l nodes=4:ppn=1,pmem=1gb,walltime=1:00:00</code><br>
+      
+      Nodes are physical machines; <code>ppn</code> means _processors per node_.
+      When requesting memory for one node, use <code>mem</code>; when requesting
+      more than one node, use instead <code>pmem</code> for _processor memory_.
+      The total memory requested in the first case is 1gb; in the second it is
+      4gb; if you request <code>nodes=1:ppn=4,mem=1gb</code>, there is 1gb total
+      that can be used by all four of the processors combined.
     </td>
   </tr>
 
