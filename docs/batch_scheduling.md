@@ -12,3 +12,18 @@ _What jobs look like to the scheduler_
 
 Flux uses a scheduler called Moab, and it controls not only scheduling
 but who has money in their piggy banks and can afford to run jobs.
+
+The command that you use to find out which piggy banks (accounts) you
+can use is `mdiag`, as in
+
+```
+$ mdiag -u $USER
+```
+
+where you can use either the `USER` variable show above (with the `$` sign
+to indicate you want its contents) or you can type in your own uniqname.
+
+Please see the [example output from `mdiag`](http://cscar.research.umich.edu/wp-content/uploads/sites/5/2016/04/hpc101_mdiag.pdf)
+
+To see what other jobs yours is competing against, please see the
+[example output from `showq`](http://cscar.research.umich.edu/wp-content/uploads/sites/5/2016/04/hpc101_showq.pdf)
