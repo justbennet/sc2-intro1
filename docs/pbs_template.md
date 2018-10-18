@@ -5,14 +5,15 @@
 ####  PBS preamble
 #PBS -N 
 
-#PBS -M 
-#PBS -m ea
-#PBS -j oe
+#PBS -l 
 
 #PBS -A 
 #PBS -q 
 
-#PBS -l 
+#PBS -M 
+#PBS -m ea
+
+#PBS -j oe
 #PBS -V
 
 ####  End PBS preamble
