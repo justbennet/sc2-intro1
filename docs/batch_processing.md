@@ -69,8 +69,9 @@ We will now look at each, in the order they appear there.
 
   <tr>
     <td><code>-j</code></td>
-    <td>Without the <code>-j</code> option, whatever the job prints to <code>STDOUT</code> will go
-      in one file and whatever the job prints to <code>STDERR</code> will go in another.
+    <td>Without the <code>-j</code> option, whatever the job prints to <code>STDOUT</code>
+      will go in one file and whatever the job prints to <code>STDERR</code> will go in
+      another. Most commonly, you will want to join the errors to the output with <code>oe</code>.
       The <code>-j</code> option says to join the two and put everything into the job
       output file (not to be confused with output that your programs may write).
       If you specify <code>-j eo</code> the two will be joined and put into the
