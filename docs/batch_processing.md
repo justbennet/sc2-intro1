@@ -31,6 +31,22 @@ We will now look at each, in the order they appear there.
   </tr>
 
   <tr>
+    <td><code>-l</code></td>
+    <td>The <code>-l</code> (small 'ell') option specifies the resources the job
+      needs.  By resources, we mean physical nodes, processor cores, memory, and
+      the maximum time the job will run.
+      
+      This typically looks like
+      
+      <code>#PBS -l nodes=1:ppn=1,mem=1gb,walltime=1:00:00</code>
+      
+      or
+      
+      <code>#PBS -l nodes=4:ppn=1,pmem=1gb,walltime=1:00:00</code>
+    </td>
+  </tr>
+
+  <tr>
     <td><code>-A</code></td>
     <td>The <code>-A</code> option specifies the account to use; that is, how will the
       job be paid for. Different types of Flux services have different suffixes.
@@ -90,3 +106,5 @@ We will now look at each, in the order they appear there.
   </td>
   </tr>
 </table>
+
+
